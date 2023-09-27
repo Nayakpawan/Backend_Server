@@ -1,0 +1,12 @@
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
+mongoose.set('strictQuery', false);
+const userSchema = new Schema({
+   name:String,
+   email:String,
+   phone:Number,
+   msg:String,
+   option:String
+});
+
+module.exports = mongoose.model('StartProject', userSchema);
